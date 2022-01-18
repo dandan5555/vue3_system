@@ -8,7 +8,7 @@ import { ElLoading } from 'element-plus'
 class ddRequest {
   instance: AxiosInstance
   interceptors?: ddRequestInterceptors
-  loading: ILoadingInstance
+  // loading: ILoadingInstance
 
   constructor(config: ddRequestConfig) {
     this.instance = axios.create(config)
