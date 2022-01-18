@@ -17,17 +17,20 @@ app.mount('#app')
 
 import ddRequest from './network'
 
-ddRequest.request({
-  url: '/multidata',
-  method: 'GET'
-  // interceptors: {
-  //   requestInterceptor(config) {
-  //     console.log('单个请求拦截成功')
-  //     return config
-  //   },
-  //   responseInterceptor(config) {
-  //     console.log('单个响应拦截成功')
-  //     return config
-  //   }
-  // }
-})
+ddRequest
+  .request({
+    url: '/home/multidata',
+    method: 'GET'
+    // showLoading: false
+    // interceptors: {
+    //   requestInterceptor(config) {
+    //     console.log('单个请求拦截成功')
+    //     return config
+    //   },
+    //   responseInterceptor(config) {
+    //     console.log('单个响应拦截成功')
+    //     return config
+    //   }
+    // }
+  })
+  .then((res) => console.log(res))

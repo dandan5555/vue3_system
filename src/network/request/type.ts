@@ -2,16 +2,15 @@
 
 import type { AxiosRequestConfig, AxiosResponse } from 'axios'
 
-export interface ddRequestInterceptors {
+export interface ddRequestInterceptors<T = AxiosResponse> {
   requestInterceptor?: (config: AxiosRequestConfig) => AxiosRequestConfig
   requestInterceptorCatch?: (err: any) => any
-  responseInterceptor?: (config: AxiosResponse) => AxiosResponse
+  responseInterceptor?: (config: T) => T
   responseInterceptorCatch?: (err: any) => any
 }
 
 // 扩展AxiosRequestConfig接口
-export interface ddRequestConfig extends AxiosRequestConfig {
-  interceptors?: ddRequestInterceptors
+export interface ddRequestConfig<T = AxiosResponse> extends AxiosRequestConfig {
+  interceptors?: ddRequestInterceptors<T>
+  showLoading?: boolean
 }
-
-// export { ddRequestConfig, ddRequestInterceptors }

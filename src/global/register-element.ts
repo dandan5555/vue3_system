@@ -1,6 +1,6 @@
 // 对element-plus插件局部注册进行一个封装
 import type { App } from 'vue'
-import 'element-plus/theme-chalk/index.css'
+import 'element-plus/lib/theme-chalk/index.css'
 
 import {
   ElAlert,

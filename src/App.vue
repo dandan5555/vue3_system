@@ -11,6 +11,7 @@
 <script lang="ts">
 import { defineComponent } from '_vue-demi@0.12.1@vue-demi'
 
+// defineComponent:做类型限制和类型推导的
 export default defineComponent({})
 </script>
 
