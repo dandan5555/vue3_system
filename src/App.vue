@@ -1,10 +1,18 @@
 <template>
   <div id="nav">
+    <el-button>aaa</el-button>
+    <el-button type="danger">aaa</el-button>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </div>
   <router-view />
 </template>
+
+<script lang="ts">
+import { defineComponent } from '_vue-demi@0.12.1@vue-demi'
+
+export default defineComponent({})
+</script>
 
 <style lang="less">
 #app {
